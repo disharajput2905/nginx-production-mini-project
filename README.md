@@ -22,25 +22,26 @@ This setup simulates how real-world production systems are structured.
 
 ---
 
-## 🏗 Architecture
+## 🏗️ Architecture
 
+```
 Client (Browser)
-        │
-        ▼
-    NGINX (Port 80 → 443)
-        │
-        ├── Serves Static Frontend
-        │
-        └── /api/ → Load Balancer
-                      │
-        ┌─────────────┴─────────────┐
-        ▼                           ▼
-Backend 1 (Flask - 5000)     Backend 2 (Flask - 5001)
+        ↓
+NGINX (Port 80 → 443 SSL)
+        ↓
+Serves Static Frontend
+        ↓
+/api/ → Load Balancer (upstream)
+        ↓
+Backend 1 (Flask - 5000)
+Backend 2 (Flask - 5001)
+```
 
 ---
 
 ## 📂 Project Structure
 
+```
 nginx-production-mini-project/
 │
 ├── backend1/
@@ -52,9 +53,13 @@ nginx-production-mini-project/
 ├── frontend/
 │   └── index.html
 │
+├── nginx/
+│   ├── myproject.conf
+│  
+│
 ├── load_balancing.sh
 └── README.md
-
+```
 ---
 
 ## ⚙️ Technologies Used
