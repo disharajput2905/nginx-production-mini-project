@@ -1,11 +1,9 @@
 from flask import Flask
-import socket
-
 app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return f"Hello from Backend 2 | host:{socket.gethostname()}\n"
+    return f"backend 2 - port5001\n"
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5001)
+    app.run(port=5001)

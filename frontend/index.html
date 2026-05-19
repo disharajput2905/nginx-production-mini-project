@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NGINX Production Mini Project</title>
+</head>
+<body>
+    <h1>My Static Website</h1>
+    <p>If you see this, NGINX is serving static files.</p>
+
+    <h2>Backend Test:</h2>
+    <button onclick="callAPI()">Call Backend</button>
+
+    <p id="result"></p>
+
+    <script>
+        function callAPI() {
+            fetch('/api/')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("result").innerText = data;
+            });
+        }
+    </script>
+</body>
+</html>
