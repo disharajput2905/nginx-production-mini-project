@@ -73,6 +73,18 @@ nginx-production-mini-project/
 
 ---
 
+## 🎬 Demo
+
+### 📸 Screenshot
+
+![Project Screenshot](assets/screenshot.png)
+![backend check](assets/screenshot2.png)
+---
+
+### 🎥 Live Demo (GIF)
+
+![Project Demo](assets/demo.gif)
+
 ## 🔧 Backend Setup
 
 Each backend runs a simple Flask app.
