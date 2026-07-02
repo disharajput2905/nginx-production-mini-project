@@ -6,4 +6,4 @@ def home():
     return f"backend 2 - port5001\n"
 
 if __name__ == "__main__":
-    app.run(port=5001)
+   app.run(host="0.0.0.0", port=5001)
